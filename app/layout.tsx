@@ -6,6 +6,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
 import { baseUrl } from './sitemap'
 import {DotGothic16} from 'next/font/google'
+import localFont from 'next/font/local'
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: {
@@ -40,7 +41,27 @@ const dotGothic16 = DotGothic16({
   weight: '400',
   subsets: ['latin'],
 })
-// DotGothic16
+
+const proto = localFont({
+  src: [
+    {
+      path: '../public/0xProtoNerdFontMono-Regular.ttf',
+      weight: '400',
+      style: 'normal',
+    },
+    {
+      path: '../public/0xProtoNerdFontMono-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+    {
+      path: '../public/0xProtoNerdFontMono-Bold.ttf',
+      weight: '700',
+      style: 'normal',
+    },
+  ],
+})
+
 export default function RootLayout({
   children,
 }: {
@@ -51,7 +72,7 @@ export default function RootLayout({
       lang="en"
       className={cx(
         'text-black bg-white dark:text-white dark:bg-black',
-      dotGothic16.className 
+      proto.className 
       )}
     >
       <body className="antialiased max-w-xl mx-4 mt-8 lg:mx-auto">
