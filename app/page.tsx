@@ -15,7 +15,7 @@ export default function Page() {
       </p>
       <RotatingText
         options={["I am that basic non binary linux enthusiast that spends too much time online",
-                  "I hate when antennas point in different directions",
+                  "Pleaase point the antennas",
                   "Welcome to my thought shithole"]}
         typeSpeed={100}
         backSpeed={100}
