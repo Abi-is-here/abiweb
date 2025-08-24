@@ -16,10 +16,13 @@ export default function Page() {
       <RotatingText
         options={["I am that basic non binary linux enthusiast that spends too much time online",
                   "Pleaase point the antennas",
-                  "Welcome to my thought shithole"]}
-        typeSpeed={100}
-        backSpeed={100}
-        backDelay={400}
+                  "Welcome to my thought shithole",
+                  "Yes I watch anime",
+                  "I am an ever-expanding weed, constantly finding new things to grow into",
+                  "お腹すいた"]}
+        typeSpeed={60}
+        backSpeed={50}
+        backDelay={500}
         />
         
       <div className="my-8">
