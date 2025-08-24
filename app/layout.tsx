@@ -4,11 +4,10 @@ import { Navbar } from './components/nav'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import Footer from './components/footer'
-import { baseUrl } from './sitemap'
 import {DotGothic16} from 'next/font/google'
 import localFont from 'next/font/local'
 export const metadata: Metadata = {
-  metadataBase: new URL(baseUrl),
+  metadataBase: new URL("https://Abi-is-here.github.io"),
   title: {
     default: 'Abiweb',
     template: '%s | Abiweb',

@@ -1,8 +1,8 @@
 import { notFound } from 'next/navigation'
 import { CustomMDX } from 'app/components/mdx'
 import { formatDate, getBlogPosts } from 'app/blog/utils'
-import { baseUrl } from 'app/sitemap'
 
+let baseUrl = "https://Abi-is-here.github.io"
 export async function generateStaticParams() {
   let posts = getBlogPosts()
 
@@ -12,6 +12,7 @@ export async function generateStaticParams() {
 }
 
 export function generateMetadata({ params }) {
+
   let post = getBlogPosts().find((post) => post.slug === params.slug)
   if (!post) {
     return
